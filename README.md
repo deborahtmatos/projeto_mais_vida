@@ -1,2 +1,2 @@
-# -vida
+# + vida
 Projeto + VIDA - HACKATHON PUC MINAS - DESAFIOS ODS 2024
