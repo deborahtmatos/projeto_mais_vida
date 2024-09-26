@@ -1,0 +1,209 @@
+/* Estilos gerais */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kodchasan', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f7f7f7;
+    scroll-behavior: smooth;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #0B0A0A;
+    padding: 1.25rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 3.125rem;
+    height: 3.125rem;
+    margin-right: 0.9375rem;
+    transition: transform 0.4s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.logo-text {
+    color: #FDFDFD;
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+}
+
+nav {
+    display: flex;
+    gap: 1.875rem;
+}
+
+nav a {
+    color: #FDFDFD;
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: 500;
+    position: relative;
+    padding: 0.625rem;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #FFDD57;
+    text-shadow: 0 4px 8px rgba(255, 221, 87, 0.5);
+}
+
+/* Seção do Fórum */
+.forum-section {
+    padding: 4rem 1.25rem;
+    background-color: #f9f9f9;
+    border-top: 2px solid #ddd;
+    text-align: center;
+}
+
+.forum-container {
+    max-width: 75rem; /* 1200px */
+    margin: 0 auto;
+}
+
+.forum-title {
+    font-size: 2.5rem; /* 40px */
+    margin-bottom: 1.5rem;
+    color: #2059B0;
+    font-weight: 600;
+}
+
+.forum-description {
+    font-size: 1.25rem; /* 20px */
+    color: #333;
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+}
+
+.forum-categories {
+    display: flex;
+    justify-content: space-between;
+    gap: 2.5rem; /* 40px */
+}
+
+.forum-category {
+    flex: 1;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 0.625rem; /* 10px */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    text-align: center;
+}
+
+.forum-category:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.category-icon {
+    max-width: 4.375rem; /* 70px */
+    margin-bottom: 1rem;
+}
+
+.forum-category h2 {
+    font-size: 1.75rem; /* 28px */
+    margin-bottom: 1rem;
+    color: #2059B0;
+}
+
+.forum-category p {
+    font-size: 1.125rem; /* 18px */
+    margin-bottom: 1.5rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.category-link {
+    background-color: #2059B0;
+    color: white;
+    padding: 0.9375rem 2rem; /* 15px 32px */
+    text-decoration: none;
+    border-radius: 0.5rem; /* 8px */
+    font-size: 1.125rem; /* 18px */
+    font-weight: 600;
+    transition: background-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.category-link:hover,
+.category-link:focus {
+    background-color: #255d8a;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+footer {
+    background-color: #0B0A0A;
+    color: #FDFDFD;
+    padding: 2rem 1.25rem;
+    text-align: center;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.footer-nav a {
+    color: #FFDD57;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus {
+    color: #ffffff;
+    text-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .forum-categories {
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+}
