@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Relatórios | + Vidas</title>
+    <link rel="stylesheet" href="forum.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Kodchasan', sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2c3e50;
+            padding: 20px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 50px;
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            color: #fff;
+        }
+
+        .nav-menu a {
+            color: #fff;
+            margin-right: 20px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .nav-menu a:hover {
+            color: #1abc9c;
+        }
+
+        .dashboard-section {
+            padding: 20px;
+        }
+
+        .dashboard-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .card img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer nav a {
+            color: #fff;
+            margin-right: 10px;
+            text-decoration: none;
+        }
+
+        footer nav a:hover {
+            color: #1abc9c;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="#inicio">
+                <img src="logo.png" alt="Logo + Vidas" class="logo">
+            </a>
+            <span class="logo-text">+ Vidas</span>
+        </div>
+        <nav class="nav-menu">
+            <a href="index.html#inicio">Início</a>
+            <a href="#indicadores">Indicadores</a>
+            <a href="#forum">Fórum</a>
+            <a href="index.html#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section id="indicadores" class="dashboard-section">
+        <div class="dashboard-container" id="reportContainer">
+            <!-- Cards serão gerados aqui pelo script -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 + Vidas. Todos os direitos reservados.</p>
+            <nav class="footer-nav">
+                <a href="index.html#inicio">Início</a>
+                <a href="#indicadores">Indicadores</a>
+                <a href="#forum">Fórum</a>
+                <a href="index.html#contato">Contato</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        const reports = [
+            { title: "Relatório de Mortalidade por Causa", description: "Analisa as principais causas de morte no hospital, permitindo que o gestor entenda as maiores áreas de risco." },
+            { title: "Relatório de Admissões e Altas", description: "Detalha o número de pacientes admitidos e liberados diariamente, semanalmente ou mensalmente, por especialidade." },
+            { title: "Relatório de Ocupação de Leitos", description: "Exibe a taxa de ocupação de leitos por departamento e o tempo médio de permanência dos pacientes." },
+            { title: "Relatório de Índice de Mortalidade Geral", description: "Fornece as taxas de mortalidade geral no hospital, segregadas por unidade de tratamento, idade e causa da morte." },
+            { title: "Relatório de Infecções Hospitalares", description: "Fornece dados sobre o número de infecções adquiridas no hospital, com detalhamento por unidade de tratamento e tipo de infecção." },
+            { title: "Relatório de Tempo de Espera no Atendimento", description: "Analisa o tempo de espera dos pacientes entre a entrada no hospital e o atendimento efetivo, identificando gargalos." },
+            { title: "Relatório de Desempenho de Equipes Médicas", description: "Avalia o desempenho dos médicos e enfermeiros com base em métricas como número de atendimentos, tempo de resposta e taxa de sucesso." },
+            { title: "Relatório de Reinternações", description: "Monitora as taxas de reinternação de pacientes dentro de 30 dias após a alta, focando em causas e áreas críticas." },
+            { title: "Relatório de Pacientes em Lista de Espera", description: "Mostra o número de pacientes aguardando por internações, procedimentos ou cirurgias, priorizando pela gravidade do caso." },
+            { title: "Relatório de Custos por Paciente", description: "Exibe os custos médicos, laboratoriais e de medicamentos por paciente, ajudando a entender a eficiência financeira dos tratamentos." },
+            { title: "Relatório de Incidentes de Segurança do Paciente", description: "Registra os incidentes relacionados à segurança do paciente, como quedas e erros de medicação." },
+            { title: "Relatório de Atendimentos de Urgência e Emergência", description: "Monitora a quantidade e os tipos de atendimentos realizados em urgência e emergência, categorizando por horário e tipo de demanda." },
+            { title: "Relatório de Pacientes Crônicos", description: "Foca nos atendimentos e internações de pacientes com doenças crônicas, como diabetes e hipertensão, acompanhando sua evolução." },
+            { title: "Relatório de Transferências de Pacientes", description: "Monitora as transferências de pacientes para outras instituições, explicando os motivos e destino dos mesmos." },
+            { title: "Relatório de Procedimentos Cirúrgicos", description: "Detalha o número de cirurgias realizadas, taxa de sucesso, tempo de recuperação, cancelamentos e complicações." },
+            { title: "Relatório de Índice de Mortalidade Infantil e Fetal", description: "Analisa a mortalidade de neonatos e fetos no hospital, incluindo causas, áreas de atendimento e procedimentos adotados." },
+            { title: "Relatório de Atendimentos Ambulatoriais", description: "Acompanha o volume de atendimentos ambulatoriais e consultas externas, categorizando por especialidade e médico responsável." },
+            { title: "Relatório de Utilização de Equipamentos Críticos", description: "Monitora o uso de equipamentos críticos, garantindo a eficiência de alocação." },
+            { title: "Relatório de Disponibilidade de Medicamentos e Insumos", description: "Analisa o estoque de medicamentos e insumos essenciais, identificando itens críticos e sugerindo reposições." },
+            { title: "Relatório de Satisfação dos Pacientes", description: "Coleta e exibe feedback dos pacientes sobre a qualidade dos serviços prestados, tempo de espera e atendimento." }
+        ];
+
+        const reportContainer = document.getElementById('reportContainer');
+
+        reports.forEach(report => {
+            const card = document.createElement('div');
+            card.classList.add('card');
+
+            card.innerHTML = `
+                <img src="logo.jpg" alt="Relatório ${report.title}">
+                <h3>${report.title}</h3>
+                <p>${report.description}</p>
+            `;
+
+            reportContainer.appendChild(card);
+        });
+    </script>
+
+</body>
+
+</html>
