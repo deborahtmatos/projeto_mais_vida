@@ -1,4 +1,4 @@
-// Espera que o DOM seja totalmente carregado antes de executar os scripts
+// Espera que o DOM seja totalmente carregado antes de executar os scripts 
 document.addEventListener('DOMContentLoaded', function () {
 
     // Navegação suave para os links do menu
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
             event.preventDefault();
             const targetId = this.getAttribute('href').substring(1);
             const targetElement = document.getElementById(targetId);
-            
+
             if (targetElement) {
                 window.scrollTo({
                     top: targetElement.offsetTop - 50, // Compensa o tamanho do header
@@ -19,11 +19,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Evento de clique para o botão de "Acessar Fórum da Comunidade"
-    document.querySelector('.forum-link').addEventListener('click', function (event) {
-        event.preventDefault();
-        alert('Você está prestes a acessar o fórum. Aguarde enquanto carregamos a página.');
-        window.location.href = 'forum_discussao.html'; // Redireciona para a página específica do fórum
-    });
+    const forumLink = document.querySelector('.forum-link');
+    if (forumLink) {
+        forumLink.addEventListener('click', function (event) {
+            event.preventDefault();
+            alert('Você está prestes a acessar o fórum. Aguarde enquanto carregamos a página.');
+            window.location.href = 'forum_discussao.html'; // Redireciona para a página específica do fórum
+        });
+    }
 
     // Eventos de clique para as Chamadas para Ação (CTAs) da seção do fórum
     const ctaButtons = document.querySelectorAll('.cta-button');
@@ -35,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Define o comportamento para cada botão específico
             if (buttonText.includes('Contribuir com uma Discussão')) {
                 alert('Você será redirecionado para iniciar uma nova discussão.');
-                window.location.href = 'nova_discussao.html';
+                window.location.href = 'contribuir.html'; // Caminho ajustado conforme o HTML atualizado
             } else if (buttonText.includes('Compartilhar Boas Práticas')) {
                 alert('Você será redirecionado para compartilhar suas boas práticas.');
                 window.location.href = 'compartilhar_praticas.html';
