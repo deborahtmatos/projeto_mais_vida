@@ -1,10 +1,11 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fórum da Comunidade | + Vidas</title>
+    <meta name="description" content="Participe do Fórum da Comunidade + Vidas e colabore com gestores hospitalares e profissionais de saúde para melhorar a gestão pública de saúde no Brasil.">
     <link rel="stylesheet" href="forum.css">
     <link href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -12,80 +13,85 @@
 <body>
     <header>
         <div class="logo-container">
-            <a href="#inicio">
+            <a href="index.html#inicio">
                 <img src="logo.png" alt="Logo + Vidas" class="logo">
+                <span class="logo-text">+ Vidas</span>
             </a>
-            <span class="logo-text">+ Vidas</span>
         </div>
         <nav class="nav-menu">
-            <a href="index.html#inicio">Início</a>
-            <a href="#indicadores">Indicadores</a>
-            <a href="#forum">Fórum</a>
-            <a href="index.html#contato">Contato</a>
+            <ul>
+                <li><a href="index.html#inicio">Início</a></li>
+                <li><a href="index.html#indicadores">Indicadores</a></li>
+                <li><a href="forum.html">Fórum</a></li>
+                <li><a href="index.html#contato">Contato</a></li>
+            </ul>
         </nav>
     </header>
 
-    <section id="forum" class="forum-section">
-        <div class="forum-container">
-            <h1 class="forum-title">Fórum da Comunidade</h1>
-            <p class="forum-description">Este é o espaço onde você pode discutir, compartilhar insights e buscar soluções colaborativas com outros gestores hospitalares e profissionais de saúde. Vamos trabalhar juntos para reduzir a mortalidade hospitalar e melhorar a qualidade da gestão pública de saúde no Brasil.</p>
-            
-            <div class="categories-container">
-                <h2>Categorias do Fórum</h2>
-                
-                <div class="categories-wrapper">
-                    <!-- Categoria: Dúvidas Gerais -->
-                    <div class="forum-category">
-                        <h3>Dúvidas Gerais</h3>
-                        <p>Compartilhe e encontre respostas para dúvidas comuns sobre gestão hospitalar e uso da plataforma.</p>
-                        <a href="discussao_duvidas.html" class="forum-link">Entrar</a>
-                    </div>
-                    
-                    <!-- Categoria: Boas Práticas -->
-                    <div class="forum-category">
-                        <h3>Boas Práticas</h3>
-                        <p>Discuta boas práticas que ajudam a melhorar a qualidade da gestão hospitalar e resultados em saúde.</p>
-                        <a href="discussao_boas_praticas.html" class="forum-link">Entrar</a>
-                    </div>
-                    
-                    <!-- Categoria: Saúde Pública -->
-                    <div class="forum-category">
-                        <h3>Saúde Pública</h3>
-                        <p>Discussões voltadas à saúde pública, políticas de saúde, e melhorias no sistema SUS.</p>
-                        <a href="discussao_saude_publica.html" class="forum-link">Entrar</a>
-                    </div>
-                    
-                    <!-- Categoria: Cuidados Paliativos -->
-                    <div class="forum-category">
-                        <h3>Cuidados Paliativos</h3>
-                        <p>Espaço para compartilhar experiências e práticas relacionadas ao cuidado paliativo.</p>
-                        <a href="discussao_cuidados_paliativos.html" class="forum-link">Entrar</a>
+    <main>
+        <section id="forum" class="forum-section">
+            <div class="forum-container">
+                <h1 class="forum-title">Fórum da Comunidade</h1>
+                <p class="forum-description">Este é o espaço onde você pode discutir, compartilhar insights e buscar soluções colaborativas com outros gestores hospitalares e profissionais de saúde. Vamos trabalhar juntos para reduzir a mortalidade hospitalar e melhorar a qualidade da gestão pública de saúde no Brasil.</p>
+
+                <div class="categories-container">
+                    <h2>Categorias do Fórum</h2>
+
+                    <div class="categories-wrapper">
+                        <!-- Categoria: Dúvidas Gerais -->
+                        <article class="forum-category">
+                            <h3>Dúvidas Gerais</h3>
+                            <p>Compartilhe e encontre respostas para dúvidas comuns sobre gestão hospitalar e uso da plataforma.</p>
+                            <a href="discussao_duvidas.html" class="forum-link">Entrar</a>
+                        </article>
+
+                        <!-- Categoria: Boas Práticas -->
+                        <article class="forum-category">
+                            <h3>Boas Práticas</h3>
+                            <p>Discuta boas práticas que ajudam a melhorar a qualidade da gestão hospitalar e resultados em saúde.</p>
+                            <a href="discussao_boas_praticas.html" class="forum-link">Entrar</a>
+                        </article>
+
+                        <!-- Categoria: Saúde Pública -->
+                        <article class="forum-category">
+                            <h3>Saúde Pública</h3>
+                            <p>Discussões voltadas à saúde pública, políticas de saúde e melhorias no sistema SUS.</p>
+                            <a href="discussao_saude_publica.html" class="forum-link">Entrar</a>
+                        </article>
+
+                        <!-- Categoria: Cuidados Paliativos -->
+                        <article class="forum-category">
+                            <h3>Cuidados Paliativos</h3>
+                            <p>Espaço para compartilhar experiências e práticas relacionadas ao cuidado paliativo.</p>
+                            <a href="discussao_cuidados_paliativos.html" class="forum-link">Entrar</a>
+                        </article>
                     </div>
                 </div>
-            </div>
 
-            <div class="forum-cta">
-                <a href="discussao.html" class="cta-button">Contribuir com uma Discussão</a>
-                <a href="#" class="cta-button">Compartilhar Boas Práticas</a>
-                <a href="customizacao_dashboard.html" class="cta-button">Customizar Dashboard</a>
+                <div class="forum-cta">
+                    <a id="discussao-button" href="discussao.html" class="cta-button">Contribuir com uma Discussão</a>
+                    <a id="compartilhar-praticas-button" href="compartilhar_boas_praticas.html" class="cta-button">Compartilhar Boas Práticas</a>
+                    <a id="customizar-dashboard-button" href="customizacao_dashboard.html" class="cta-button">Customizar Dashboard</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
         <div class="footer-container">
             <p>&copy; 2024 + Vidas. Todos os direitos reservados.</p>
             <nav class="footer-nav">
-                <a href="index.html#inicio">Início</a>
-                <a href="#indicadores">Indicadores</a>
-                <a href="#forum">Fórum</a>
-                <a href="index.html#contato">Contato</a>
+                <ul>
+                    <li><a href="index.html#inicio">Início</a></li>
+                    <li><a href="index.html#indicadores">Indicadores</a></li>
+                    <li><a href="forum.html">Fórum</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                </ul>
             </nav>
         </div>
     </footer>
 
     <script src="forum.js"></script>
-
 </body>
 
 </html>

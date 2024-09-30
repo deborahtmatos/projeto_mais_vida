@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Navegação suave para os links do menu
     const navLinks = document.querySelectorAll('nav a[href^="#"], .footer-nav a[href^="#"]');
 
-    // Navegação suave para os links do menu
     navLinks.forEach(link => {
         link.addEventListener('click', event => {
             event.preventDefault();
@@ -9,10 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetElement = document.getElementById(targetId);
 
             if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 50,
-                    behavior: 'smooth'
-                });
+                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         });
     });
@@ -35,26 +32,30 @@ document.addEventListener('DOMContentLoaded', () => {
             button.classList.add('clicked'); // Adiciona um feedback visual
             setTimeout(() => button.classList.remove('clicked'), 300); // Remove após 300ms
 
-            // Define comportamento para cada botão específico
-            if (button.textContent.includes('Contribuir com uma Discussão')) {
-                window.location.href = 'contribuir.html';
-            } else if (button.textContent.includes('Compartilhar Boas Práticas')) {
-                window.location.href = 'compartilhar_praticas.html';
-            } else if (button.textContent.includes('Customizar Dashboard')) {
-                window.location.href = 'customizacao_dashboard.html';
+            // Utiliza um switch para melhor legibilidade
+            switch (button.id) {
+                case 'discussao-button':
+                    window.location.href = 'discussao.html';
+                    break;
+                case 'compartilhar-praticas-button':
+                    window.location.href = 'compartilhar_praticas.html';
+                    break;
+                case 'customizar-dashboard-button':
+                    window.location.href = 'customizacao_dashboard.html';
+                    break;
             }
         });
     });
 
     // Destacar link do menu ao rolar pela página
+    const sections = document.querySelectorAll('section[id]');
     window.addEventListener('scroll', () => {
         let current = '';
-        const sections = document.querySelectorAll('section[id]');
 
         sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (window.scrollY >= sectionTop - 60) {
+            const sectionTop = section.offsetTop - 60;
+            const sectionHeight = section.offsetHeight;
+            if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
                 current = section.getAttribute('id');
             }
         });

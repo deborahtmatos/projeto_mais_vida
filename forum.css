@@ -1,3 +1,14 @@
+/* Variáveis de cores */
+:root {
+    --primary-color: #2168C0;
+    --secondary-color: #FFDD57;
+    --background-color: #f9f9f9;
+    --text-color: #222222;
+    --light-color: #f1f1f1;
+    --dark-color: #1A1A1A;
+    --white-color: #FFFFFF;
+}
+
 /* Estilos gerais */
 * {
     box-sizing: border-box;
@@ -7,8 +18,8 @@ body {
     font-family: 'Kodchasan', sans-serif;
     margin: 0;
     padding: 0;
-    color: #222222;
-    background-color: #f9f9f9;
+    color: var(--text-color);
+    background-color: var(--background-color);
     scroll-behavior: smooth;
     font-size: 1rem;
     line-height: 1.6;
@@ -16,7 +27,7 @@ body {
 
 /* Header */
 header {
-    background-color: #1A1A1A;
+    background-color: var(--dark-color);
     padding: 1.25rem 2.5rem;
     display: flex;
     justify-content: space-between;
@@ -44,20 +55,23 @@ header {
 }
 
 .logo-text {
-    color: #FDFDFD;
+    color: var(--white-color);
     font-size: 1.75rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.125rem;
 }
 
-nav {
+nav ul {
     display: flex;
     gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 nav a {
-    color: #FDFDFD;
+    color: var(--white-color);
     text-decoration: none;
     font-size: 1.125rem;
     font-weight: 500;
@@ -66,15 +80,16 @@ nav a {
 }
 
 nav a:hover,
-nav a:focus {
-    color: #FFDD57;
+nav a:focus,
+nav a.active {
+    color: var(--secondary-color);
     text-shadow: 0 4px 8px rgba(255, 221, 87, 0.5);
 }
 
 /* Seção do Fórum */
 .forum-section {
     padding: 4rem 1.25rem;
-    background-color: #f9f9f9;
+    background-color: var(--background-color);
     border-top: 2px solid #ddd;
     text-align: center;
 }
@@ -87,13 +102,13 @@ nav a:focus {
 .forum-title {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
-    color: #2168C0;
+    color: var(--primary-color);
     font-weight: 600;
 }
 
 .forum-description {
     font-size: 1.125rem;
-    color: #222222;
+    color: var(--text-color);
     margin-bottom: 2.5rem;
     line-height: 1.8;
 }
@@ -102,7 +117,7 @@ nav a:focus {
 .categories-container {
     margin-bottom: 2.5rem;
     padding: 2rem;
-    background-color: #fff;
+    background-color: var(--white-color);
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
@@ -111,7 +126,7 @@ nav a:focus {
     text-align: center;
     margin-bottom: 1.5rem;
     font-size: 2rem;
-    color: #2168C0;
+    color: var(--primary-color);
 }
 
 /* Layout das Categorias */
@@ -123,10 +138,10 @@ nav a:focus {
 }
 
 .forum-category {
-    flex: 0 1 calc(33.333% - 1.5rem); /* Ajustado para garantir três categorias por linha */
-    max-width: calc(33.333% - 1.5rem); /* Limite máximo para três por linha */
+    flex: 0 1 calc(33.333% - 1.5rem);
+    max-width: calc(33.333% - 1.5rem);
     padding: 1.5rem;
-    background-color: #f1f1f1;
+    background-color: var(--light-color);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -139,19 +154,19 @@ nav a:focus {
 
 .forum-category h3 {
     font-size: 1.75rem;
-    color: #2168C0;
+    color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
 .forum-category p {
     font-size: 1.125rem;
-    color: #222222;
+    color: var(--text-color);
     margin-bottom: 1rem;
 }
 
 .forum-category .forum-link {
-    background-color: #2168C0;
-    color: #FFFFFF;
+    background-color: var(--primary-color);
+    color: var(--white-color);
     padding: 10px 25px;
     text-decoration: none;
     border-radius: 8px;
@@ -176,8 +191,8 @@ nav a:focus {
 }
 
 .cta-button {
-    background-color: #FFDD57;
-    color: #222222;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
     padding: 15px 32px;
     text-decoration: none;
     border-radius: 8px;
@@ -194,10 +209,14 @@ nav a:focus {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
+.cta-button.clicked {
+    background-color: #ffcc33;
+}
+
 /* Footer */
 footer {
-    background-color: #1A1A1A;
-    color: #FDFDFD;
+    background-color: var(--dark-color);
+    color: var(--white-color);
     padding: 2rem 1.25rem;
     text-align: center;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
@@ -218,14 +237,16 @@ footer p {
     line-height: 1.6;
 }
 
-.footer-nav {
+.footer-nav ul {
     display: flex;
     gap: 2rem;
-    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .footer-nav a {
-    color: #FFDD57;
+    color: var(--secondary-color);
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s ease;
@@ -233,14 +254,14 @@ footer p {
 
 .footer-nav a:hover,
 .footer-nav a:focus {
-    color: #FFFFFF;
+    color: var(--white-color);
     text-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
     .forum-category {
-        flex: 1 1 100%; /* Uma categoria por linha em telas menores */
+        flex: 1 1 100%;
         max-width: 100%;
     }
 
