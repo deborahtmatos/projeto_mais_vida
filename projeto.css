@@ -6,15 +6,15 @@
 
 body {
     font-family: 'Kodchasan', sans-serif;
-    color: #333;
-    background-color: #f7f7f7;
+    color: #222222; /* Cor escura para facilitar leitura */
+    background-color: #f9f9f9; /* Fundo claro para contraste adequado */
     scroll-behavior: smooth;
     font-size: 1rem;
     line-height: 1.6;
 }
 
 header {
-    background-color: #0B0A0A;
+    background-color: #1A1A1A; /* Tom mais claro para melhorar o contraste */
     padding: 1.25rem 2.5rem;
     display: flex;
     justify-content: space-between;
@@ -42,7 +42,7 @@ header {
 }
 
 .logo-text {
-    color: #FDFDFD;
+    color: #FFFFFF; /* Cor branca para maior contraste */
     font-size: 1.75rem; 
     font-weight: 600;
     text-transform: uppercase;
@@ -53,7 +53,7 @@ header {
     display: none;
     background: none;
     border: none;
-    color: #FDFDFD;
+    color: #FFFFFF; /* Branco para manter contraste */
     font-size: 2rem;
     cursor: pointer;
 }
@@ -64,7 +64,7 @@ nav {
 }
 
 nav a {
-    color: #FDFDFD;
+    color: #FFFFFF; /* Branco para contraste */
     text-decoration: none;
     font-size: 1.125rem;
     font-weight: 500;
@@ -74,20 +74,19 @@ nav a {
 
 nav a:hover,
 nav a:focus {
-    color: #FFDD57;
+    color: #FFDD57; /* Cor amarela para destaque */
     text-shadow: 0 4px 8px rgba(255, 221, 87, 0.5);
 }
 
 .projeto-hero {
-    background: linear-gradient(135deg, #603891, #502a7b);
-    color: white;
+    background: linear-gradient(135deg, #5B3A99, #4B2A7B); /* Alterado para um tom mais claro e contrastante */
+    color: #FFFFFF; /* Branco para máximo contraste */
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 5rem 1.25rem;
     min-height: 80vh;
-    position: relative;
-    overflow: hidden;
+    text-align: center;
 }
 
 .projeto-content {
@@ -96,7 +95,6 @@ nav a:focus {
     max-width: 800px;
     width: 100%;
     gap: 2rem;
-    z-index: 2;
     text-align: left;
 }
 
@@ -106,32 +104,45 @@ nav a:focus {
 }
 
 .projeto-content p {
-    font-size: 1.25rem;
-    line-height: 1.8;
+    font-size: 1.125rem; /* Padronizado para consistência */
+    line-height: 1.75; /* Melhorar a legibilidade */
     color: #f0f0f0;
     margin-bottom: 1.5rem;
 }
 
-.btn-projeto {
-    background-color: #2059B0;
-    color: white;
-    padding: 1rem 2rem;
+.forum-btn {
+    background-color: #2168C0; /* Azul mais claro para contraste */
+    color: #FFFFFF;
+    padding: 1rem 2rem; /* Tamanho padrão dos botões */
     text-decoration: none;
-    border-radius: 8px;
-    font-size: 1.25rem;
+    border-radius: 10px; /* Arredondamento mais acentuado */
+    font-size: 1.25rem; /* Tamanho de fonte */
     font-weight: 600;
+    display: inline-flex; /* Para alinhar o ícone e o texto */
+    align-items: center; /* Alinhar o ícone verticalmente */
+    gap: 1rem; /* Espaço entre o ícone e o texto */
     transition: background-color 0.4s, transform 0.4s, box-shadow 0.4s;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
 }
 
-.btn-projeto:hover {
-    background-color: #255d8a;
-    transform: translateY(-3px);
+.forum-btn:hover {
+    background-color: #1A4F8A; /* Cor de hover para ambos */
+    transform: translateY(-3px); /* Elevar levemente o botão ao hover */
+}
+
+.forum-btn img {
+    max-width: 40px; /* Tamanho padrão do ícone dentro dos botões */
+    height: auto;
+    transition: transform 0.3s ease; /* Transição suave ao hover */
+}
+
+.forum-btn:hover img {
+    transform: rotate(5deg); /* Efeito de rotação leve no hover */
 }
 
 .ods3-section {
     padding: 4rem 1.25rem;
-    background-color: #f9f9f9;
+    background-color: #FFFFFF; /* Fundo branco para melhor legibilidade */
     border-top: 2px solid #ddd;
 }
 
@@ -148,14 +159,14 @@ nav a:focus {
 }
 
 .ods3-content p {
-    font-size: 1.25rem;
+    font-size: 1.125rem; /* Padronização do tamanho da fonte */
     color: #555;
-    line-height: 1.8;
+    line-height: 1.75; /* Melhorar a legibilidade */
     margin-bottom: 1.5rem;
 }
 
 footer {
-    background-color: #0B0A0A;
+    background-color: #1A1A1A; /* Cor mais clara para melhorar contraste */
     color: #FDFDFD;
     padding: 2rem 1.25rem;
     text-align: center;
@@ -178,7 +189,7 @@ footer {
 }
 
 .footer-nav a {
-    color: #FFDD57;
+    color: #FFDD57; /* Amarelo para bom contraste */
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s ease;
@@ -186,7 +197,7 @@ footer {
 
 .footer-nav a:hover,
 .footer-nav a:focus {
-    color: #ffffff;
+    color: #FFFFFF;
     text-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
 }
 
@@ -199,7 +210,7 @@ footer {
     nav {
         display: none;
         flex-direction: column;
-        background-color: #0B0A0A;
+        background-color: #1A1A1A; /* Alinhar com a cor do cabeçalho */
         position: absolute;
         top: 100%;
         left: 0;
@@ -216,15 +227,7 @@ footer {
         text-align: center;
     }
 
-    .projeto-content {
-        text-align: center;
-    }
-
-    .btn-projeto {
-        padding: 0.75rem 1.5rem;
-        font-size: 1rem;
-    }
-
+    .projeto-content,
     .ods3-content {
         text-align: center;
     }

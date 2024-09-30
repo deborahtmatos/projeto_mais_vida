@@ -6,15 +6,15 @@
 
 body {
     font-family: 'Kodchasan', sans-serif;
-    color: #333;
-    background-color: #f7f7f7;
+    color: #222222; /* Cor escura para facilitar leitura */
+    background-color: #f9f9f9; /* Fundo claro para contraste adequado */
     scroll-behavior: smooth;
     font-size: 1rem;
     line-height: 1.6;
 }
 
 header {
-    background-color: #0B0A0A;
+    background-color: #1A1A1A; /* Tornar mais claro que o preto para um contraste mais acessível */
     padding: 1.25rem 2.5rem;
     display: flex;
     justify-content: space-between;
@@ -42,7 +42,7 @@ header {
 }
 
 .logo-text {
-    color: #FDFDFD;
+    color: #FFFFFF; /* Cor branca para maior contraste */
     font-size: 1.75rem; 
     font-weight: 600;
     text-transform: uppercase;
@@ -53,7 +53,7 @@ header {
     display: none;
     background: none;
     border: none;
-    color: #FDFDFD;
+    color: #FFFFFF; /* Branco para manter contraste */
     font-size: 2rem;
     cursor: pointer;
 }
@@ -64,7 +64,7 @@ nav {
 }
 
 nav a {
-    color: #FDFDFD;
+    color: #FFFFFF; /* Branco para contraste */
     text-decoration: none;
     font-size: 1.125rem;
     font-weight: 500;
@@ -74,13 +74,13 @@ nav a {
 
 nav a:hover,
 nav a:focus {
-    color: #FFDD57;
+    color: #FFDD57; /* Cor amarela para destaque */
     text-shadow: 0 4px 8px rgba(255, 221, 87, 0.5);
 }
 
 .hero {
-    background: linear-gradient(135deg, #603891, #502a7b);
-    color: white;
+    background: linear-gradient(135deg, #5B3A99, #4B2A7B); /* Alterado para um tom mais claro e contrastante */
+    color: #FFFFFF; /* Branco para máximo contraste */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -127,12 +127,12 @@ nav a:focus {
     font-size: 1.5rem;
     line-height: 1.8;
     margin-bottom: 2rem;
-    color: #f0f0f0;
+    color: #f0f0f0; /* Leve ajuste para melhorar a legibilidade */
 }
 
 .btn {
-    background-color: #2059B0;
-    color: white;
+    background-color: #2168C0; /* Azul mais claro para contraste */
+    color: #FFFFFF;
     padding: 1rem 2rem;
     text-decoration: none;
     border-radius: 8px;
@@ -143,13 +143,13 @@ nav a:focus {
 }
 
 .btn:hover {
-    background-color: #255d8a;
+    background-color: #1A4F8A; /* Acento para o hover */
     transform: translateY(-3px);
 }
 
 .content {
     padding: 4rem 1.25rem;
-    background-color: #f9f9f9;
+    background-color: #FFFFFF; /* Fundo branco para melhor legibilidade */
     border-top: 2px solid #ddd;
 }
 
@@ -166,22 +166,26 @@ nav a:focus {
     flex: 1;
     min-width: 300px;
     padding: 1.25rem;
+    font-size: 1.125rem; /* Padronização do tamanho da fonte */
+    line-height: 1.75; /* Melhora a legibilidade do texto */
 }
 
 .forum-btn {
-    background-color: #2059B0;
-    color: white;
+    background-color: #2168C0; /* Azul mais claro */
+    color: #FFFFFF;
     padding: 1rem 2rem;
     text-decoration: none;
     border-radius: 10px;
     display: inline-flex;
     align-items: center;
+    font-size: 1.125rem; /* Padronização do tamanho da fonte */
+    font-weight: 600; /* Manter consistência com os botões anteriores */
     transition: background-color 0.4s, transform 0.4s, box-shadow 0.4s;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .forum-btn:hover {
-    background-color: #255d8a;
+    background-color: #1A4F8A; /* Ajuste para melhor contraste no hover */
     transform: translateY(-3px);
 }
 
@@ -196,7 +200,7 @@ nav a:focus {
 }
 
 footer {
-    background-color: #0B0A0A;
+    background-color: #1A1A1A; /* Cor mais clara para melhorar contraste */
     color: #FDFDFD;
     padding: 2rem 1.25rem;
     text-align: center;
@@ -219,7 +223,7 @@ footer {
 }
 
 .footer-nav a {
-    color: #FFDD57;
+    color: #FFDD57; /* Amarelo para bom contraste */
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s ease;
@@ -227,7 +231,7 @@ footer {
 
 .footer-nav a:hover,
 .footer-nav a:focus {
-    color: #ffffff;
+    color: #FFFFFF;
     text-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
 }
 
@@ -240,7 +244,7 @@ footer {
     nav {
         display: none;
         flex-direction: column;
-        background-color: #0B0A0A;
+        background-color: #1A1A1A; /* Alinhar com a cor do cabeçalho */
         position: absolute;
         top: 100%;
         left: 0;
