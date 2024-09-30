@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Kodchasan', sans-serif;
+    color: #333;
+    background-color: #f7f7f7;
+    scroll-behavior: smooth;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #0B0A0A;
+    padding: 1.25rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px; 
+    height: auto;
+    margin-right: 15px;
+    transition: transform 0.4s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.logo-text {
+    color: #FDFDFD;
+    font-size: 1.75rem; 
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #FDFDFD;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: #FDFDFD;
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: 500;
+    padding: 10px;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #FFDD57;
+    text-shadow: 0 4px 8px rgba(255, 221, 87, 0.5);
+}
+
+.projeto-hero {
+    background: linear-gradient(135deg, #603891, #502a7b);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 1.25rem;
+    min-height: 80vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.projeto-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    width: 100%;
+    gap: 2rem;
+    z-index: 2;
+    text-align: left;
+}
+
+.projeto-content h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+.projeto-content p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #f0f0f0;
+    margin-bottom: 1.5rem;
+}
+
+.btn-projeto {
+    background-color: #2059B0;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    transition: background-color 0.4s, transform 0.4s, box-shadow 0.4s;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn-projeto:hover {
+    background-color: #255d8a;
+    transform: translateY(-3px);
+}
+
+.ods3-section {
+    padding: 4rem 1.25rem;
+    background-color: #f9f9f9;
+    border-top: 2px solid #ddd;
+}
+
+.ods3-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.ods3-content h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.ods3-content p {
+    font-size: 1.25rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+footer {
+    background-color: #0B0A0A;
+    color: #FDFDFD;
+    padding: 2rem 1.25rem;
+    text-align: center;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.footer-nav a {
+    color: #FFDD57;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus {
+    color: #ffffff;
+    text-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Menu Toggle para dispositivos menores */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        background-color: #0B0A0A;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    nav a {
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    .projeto-content {
+        text-align: center;
+    }
+
+    .btn-projeto {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .ods3-content {
+        text-align: center;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
