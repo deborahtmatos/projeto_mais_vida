@@ -58,12 +58,12 @@ header {
     cursor: pointer;
 }
 
-nav {
+.nav-menu {
     display: flex;
     gap: 1.5rem;
 }
 
-nav a {
+.nav-menu a {
     color: #FFFFFF; /* Branco para contraste */
     text-decoration: none;
     font-size: 1.125rem;
@@ -72,8 +72,8 @@ nav a {
     transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
-nav a:hover,
-nav a:focus {
+.nav-menu a:hover,
+.nav-menu a:focus {
     color: #FFDD57; /* Cor amarela para destaque */
     text-shadow: 0 4px 8px rgba(255, 221, 87, 0.5);
 }
@@ -138,6 +138,51 @@ nav a:focus {
 
 .forum-btn:hover img {
     transform: rotate(5deg); /* Efeito de rotação leve no hover */
+}
+
+.equipe-section {
+    padding: 50px;
+    background-color: #f9f9f9;
+}
+
+.equipe-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.equipe-content h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.equipe-membros {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.membro {
+    flex: 1 1 30%;
+    margin: 20px;
+}
+
+.membro img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.membro h3 {
+    margin-top: 15px;
+    font-size: 1.5em;
+}
+
+.membro p {
+    font-size: 1em;
+    color: #666;
 }
 
 .ods3-section {
@@ -207,7 +252,7 @@ footer {
         display: block;
     }
 
-    nav {
+    .nav-menu {
         display: none;
         flex-direction: column;
         background-color: #1A1A1A; /* Alinhar com a cor do cabeçalho */
@@ -218,11 +263,11 @@ footer {
         padding: 1rem 0;
     }
 
-    nav.open {
+    .nav-menu.open {
         display: flex;
     }
 
-    nav a {
+    .nav-menu a {
         padding: 10px 20px;
         text-align: center;
     }
