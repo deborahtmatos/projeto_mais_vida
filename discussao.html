@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contribuir com uma Discussão | + Vidas</title>
+    <link rel="stylesheet" href="discussao.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="#inicio">
+                <img src="logo.png" alt="Logo + Vidas" class="logo">
+            </a>
+            <span class="logo-text">+ Vidas</span>
+        </div>
+        <nav class="nav-menu">
+            <a href="index.html#inicio">Início</a>
+            <a href="#indicadores">Indicadores</a>
+            <a href="forum.html#forum">Fórum</a>
+            <a href="index.html#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section id="contribuir" class="contribuir-section">
+        <div class="contribuir-container">
+            <h1 class="contribuir-title">Contribuir com uma Discussão</h1>
+            <p class="contribuir-description">Compartilhe suas dúvidas, experiências e busque ajuda colaborativa com outros gestores hospitalares e profissionais de saúde. Vamos construir um ambiente de suporte mútuo para melhorar a gestão da saúde pública.</p>
+            <form action="#" method="POST" class="contribuir-form">
+                <label for="titulo" class="form-label">Título da Discussão:</label>
+                <input type="text" id="titulo" name="titulo" class="form-input" placeholder="Digite o título da sua discussão..." required>
+
+                <label for="categoria" class="form-label">Categoria:</label>
+                <select id="categoria" name="categoria" class="form-input" required>
+                    <option value="gestao">Gestão Hospitalar</option>
+                    <option value="boas-praticas">Boas Práticas</option>
+                    <option value="tecnologia">Tecnologia em Saúde</option>
+                    <option value="cuidados-paliativos">Cuidados Paliativos</option>
+                    <option value="outros">Outros</option>
+                </select>
+
+                <label for="conteudo" class="form-label">Conteúdo:</label>
+                <textarea id="conteudo" name="conteudo" class="form-input" rows="10" placeholder="Escreva aqui a sua discussão..." required></textarea>
+
+                <div class="multimidia-container">
+                    <label for="anexos" class="form-label">Anexar arquivos:</label>
+                    <input type="file" id="anexos" name="anexos" class="form-input" accept="image/*, .pdf, .docx">
+                </div>
+
+                <button type="button" class="preview-button" onclick="previewPost()">Pré-visualizar</button>
+                <button type="submit" class="submit-button">Publicar Discussão</button>
+            </form>
+
+            <div id="preview-section" class="preview-section" style="display: none;">
+                <h2>Pré-visualização da sua Discussão</h2>
+                <div id="preview-content"></div>
+                <button onclick="editPost()" class="edit-button">Editar</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 + Vidas. Todos os direitos reservados.</p>
+            <nav class="footer-nav">
+                <a href="index.html#inicio">Início</a>
+                <a href="#indicadores">Indicadores</a>
+                <a href="forum.html#forum">Fórum</a>
+                <a href="index.html#contato">Contato</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="contribuir.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,268 @@
+/* Reset e configurações básicas */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Kodchasan', sans-serif;
+    color: #222222;
+    background-color: #f9f9f9;
+    scroll-behavior: smooth;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #1A1A1A;
+    padding: 1.25rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+    margin-right: 15px;
+    transition: transform 0.4s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.logo-text {
+    color: #FFFFFF;
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+}
+
+nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: 500;
+    padding: 10px;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #FFDD57;
+    text-shadow: 0 4px 8px rgba(255, 221, 87, 0.5);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    background-color: #FFFFFF;
+    height: 3px;
+    width: 25px;
+    margin: 3px;
+}
+
+/* Seção de Contribuição */
+.contribuir-section {
+    padding: 4rem 1.25rem;
+    background-color: #FFFFFF;
+}
+
+.contribuir-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #f4f4f4;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contribuir-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2168C0;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.contribuir-description {
+    font-size: 1.125rem;
+    line-height: 1.75;
+    color: #333;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.contribuir-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-label {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #222;
+}
+
+.form-input {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #2168C0;
+    box-shadow: 0 0 4px rgba(33, 104, 192, 0.5);
+}
+
+.submit-button {
+    background-color: #2168C0;
+    color: #FFFFFF;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.4s, transform 0.4s, box-shadow 0.4s;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.submit-button:hover {
+    background-color: #1A4F8A;
+    transform: translateY(-3px);
+}
+
+.preview-button {
+    background-color: #FFDD57;
+    color: #222;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.preview-button:hover {
+    background-color: #E6C44F;
+    transform: translateY(-2px);
+}
+
+/* Rodapé */
+footer {
+    background-color: #1A1A1A;
+    color: #FDFDFD;
+    padding: 2rem 1.25rem;
+    text-align: center;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.footer-nav a {
+    color: #FFDD57;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus {
+    color: #FFFFFF;
+    text-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Estilo responsivo para dispositivos menores */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav {
+        flex-direction: column;
+        background-color: #1A1A1A;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+        display: none;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    nav a {
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    .contribuir-container {
+        padding: 1.5rem;
+    }
+
+    .contribuir-title {
+        font-size: 1.75rem;
+    }
+
+    .form-input {
+        font-size: 0.95rem;
+    }
+
+    .submit-button {
+        font-size: 1.1rem;
+        padding: 0.75rem 1.5rem;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
