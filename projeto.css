@@ -166,6 +166,7 @@ header {
 .membro {
     flex: 1 1 30%;
     margin: 20px;
+    text-align: center;
 }
 
 .membro img {
